@@ -17,6 +17,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import staym.vv.R;
+import staym.vv.http.UserHttpUtils;
+import staym.vv.network.HttpListener;
+import staym.vv.network.NetworkManager;
+import staym.vv.utils.Logs;
 
 /**
  * Created by xx on 2017/7/20.
@@ -59,6 +63,23 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.bt_go:
+                /**
+                 * 测试访问网络
+                 */
+                HttpListener listener = new HttpListener() {
+                    @Override
+                    public void onSuccess(String result, String code, String retMessage) {
+                        Logs.e("LoginTest", "success:" + result);
+                    }
+
+                    @Override
+                    public void onFail(String code, String retMessage) {
+                        Logs.e("LoginTest", "failed  code:" + code + "   message:" + retMessage);
+                    }
+                };
+                Logs.e("test","testNetwork");
+                UserHttpUtils.test(listener,2,10);
+
                 Explode explode = new Explode();
                 explode.setDuration(500);
 
