@@ -17,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import staym.vv.R;
+import staym.vv.base.BaseActivity;
 import staym.vv.http.UserHttpUtils;
 import staym.vv.network.HttpListener;
 import staym.vv.network.NetworkManager;
@@ -27,7 +28,7 @@ import staym.vv.utils.Logs;
  * 登陆页面
  */
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
     @Bind(R.id.et_username)
     EditText etUsername;

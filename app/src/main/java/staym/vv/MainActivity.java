@@ -6,10 +6,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import staym.vv.base.BaseActivity;
 import staym.vv.ui.LoginActivity;
 import staym.vv.ui.SplashActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     public static final String JSONCACHE = "sp_configure";
     private SharedPreferences sp;

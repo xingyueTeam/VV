@@ -35,7 +35,7 @@
         <activity android:name=".ui.LoginSuccessActivity" />
         <activity android:name=".ui.SplashActivity" />
 
-        <!--mob短信SDK配置代码-->
+        <!-- mob短信SDK配置代码 -->
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -49,6 +49,8 @@
         <meta-data
             android:name="Mob-AppSecret"
             android:value="b58dfa6c472937772125c97f1b98413e" />
+
+        <activity android:name=".base.BaseActivity"></activity>
     </application>
 
 </manifest>

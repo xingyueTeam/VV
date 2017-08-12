@@ -38,5 +38,6 @@ dependencies {
     compile name: 'SMSSDKGUI-3.0.0', ext: 'aar'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
     compile 'com.squareup.okhttp:okhttp:2.7.5'
 }
