@@ -2,7 +2,6 @@ package staym.vv.ui;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 
 import com.ashokvarma.bottomnavigation.BadgeItem;
@@ -13,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import staym.vv.R;
 import staym.vv.base.BaseActivity;
-import staym.vv.base.BaseViewPagerAdapter;
+import staym.vv.adapter.BaseViewPagerAdapter;
 
 /**
  * Created by xx on 2017/7/20.
@@ -64,7 +63,7 @@ public class LoginSuccessActivity extends BaseActivity {
         bm_bar.setInActiveColor(R.color.colorBottomNav);
         //初始化
         bm_bar.initialise();
-        mAdapter = new BaseViewPagerAdapter(itemStr);
+        mAdapter = new BaseViewPagerAdapter(itemStr,LoginSuccessActivity.this);
         vp_main.setAdapter(mAdapter);
         bm_bar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
